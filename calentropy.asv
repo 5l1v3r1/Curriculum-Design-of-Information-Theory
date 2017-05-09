@@ -1,0 +1,7 @@
+function entropy = calentropy(source)
+entropy = 0;
+for i=1:length(source)
+    if (source(i) - 0)<=eps(0)
+        continue;
+       
+end
