@@ -1,4 +1,5 @@
 function [vector,scalar] = huffmanencode(source)
+% perfect
 n=length(source);  
 source = sort(source);
 q=source;  
