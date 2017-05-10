@@ -1,2 +1,3 @@
-function [vector,scalar] = shanonencode(source)
+function [vector,scalar] = shannonencode(source)
+
 end
