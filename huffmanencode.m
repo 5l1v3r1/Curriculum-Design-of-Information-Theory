@@ -1,6 +1,8 @@
 function [vector,scalar] = huffmanencode(source)
+% vector返回最终每个符号的编码，对应sort(source)
+% scalar返回编码效率
 n=length(source);  
-source = sort(source);
+source = sort(source, 'ascend');
 q=source;  
 m=zeros(n-1,n);  
 for i=1:n-1  
@@ -25,6 +27,7 @@ for i=2:n-1
     end  
 end   
 for i=1:n  
+    %class(tem_c(1,n*(find(m(1,:)==i)-1)+1:find(m(1,:)==i)*n))
     vector(i,1:n)=tem_c(1,n*(find(m(1,:)==i)-1)+1:find(m(1,:)==i)*n); %用vector表示最后的huffman 编码  
     len(i)=length(find(abs(vector(i,:))~=32)); %计算每一个编码的长度  
 end  
